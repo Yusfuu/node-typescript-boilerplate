@@ -1,6 +1,6 @@
 # RESTful API Node Server Boilerplate
 
-A boilerplate/starter project for quickly building RESTful APIs
+A boilerplate/starter project for quickly building RESTful APIs and with typescript 🚀
 
 ## Installation
 
