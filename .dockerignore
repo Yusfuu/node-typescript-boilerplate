@@ -1,4 +1,5 @@
-./node_modules
 Dockerfile
 .dockerignore
-doceker-compose.yml
+node_modules
+npm-debug.log
+README.md
