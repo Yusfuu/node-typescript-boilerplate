@@ -2,9 +2,9 @@ name: Node.js CI/CD
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
@@ -24,10 +24,24 @@ jobs:
       - run: yarn
       - run: yarn build
 
+  check-env:
+    runs-on: ubuntu-latest
+    outputs:
+      my-key: ${{ steps.my-key.outputs.defined }}
+    steps:
+      - id: my-key
+        env:
+          MY_KEY: ${{ secrets.HEROKU_API_KEY }}
+          APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+          EMAIL: ${{ secrets.HEROKU_EMAIL }}
+        if: "${{ env.MY_KEY != '' && env.APP_NAME != '' && env.EMAIL != ''}}"
+        run: echo "::set-output name=defined::true"
+
   deploy:
     runs-on: ubuntu-latest
 
-    needs: [build]
+    needs: [build, check-env]
+    if: needs.check-env.outputs.my-key == 'true'
     steps:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12
