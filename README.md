@@ -66,3 +66,4 @@ Please make sure to update tests as appropriate.
 ## Authors
 
 - [@Youssef Hajjari](https://twitter.com/Yosufuu)
+- [@Youness Hassoune](https://twitter.com/YounessHassoune)
