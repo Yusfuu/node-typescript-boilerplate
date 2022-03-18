@@ -67,3 +67,4 @@ Please make sure to update tests as appropriate.
 
 - [@Youssef Hajjari](https://twitter.com/Yosufuu)
 - [@Youness Hassoune](https://twitter.com/YounessHassoune)
+- [@Othmane Kahtal](https://twitter.com/KahtalMi)
