@@ -6,11 +6,8 @@ import helmet from 'helmet';
 
 const app = express();
 
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(compression());
-app.use(helmet());
-app.use(limiter);
+app.use(helmet(), compression(), limiter, express.json());
 
 app.get('/', (req: Request, res: Response) => {
   res.json({
