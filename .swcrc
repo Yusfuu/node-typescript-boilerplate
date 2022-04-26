@@ -1,4 +1,5 @@
 {
+  "minify": true,
   "jsc": {
     "baseUrl": "src",
     "paths": {
