@@ -4,13 +4,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon -q -w src src/main.ts",
+    "docker:dev": "docker-compose up --build",
     "build": "rimraf dist && swc src -d dist",
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "start:dev": "pm2 start ecosystem.config.js",
     "kill": "pm2 kill",
     "test": "jest",
-    "monit": "pm2 monit",
-    "docker": "docker-compose up --build"
+    "monit": "pm2 monit"
   },
   "dependencies": {
     "compression": "^1.7.4",
