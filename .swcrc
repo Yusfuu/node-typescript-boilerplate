@@ -18,7 +18,11 @@
     "parser": {
       "syntax": "typescript"
     },
-    "target": "es2021"
+    "target": "es2021",
+    "minify": {
+      "compress": true,
+      "mangle": true
+    }
   },
   "module": {
     "type": "commonjs"
