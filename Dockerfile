@@ -1,5 +1,5 @@
-FROM node:lts-alpine AS debug
+FROM node:lts-alpine 
 WORKDIR /usr/src/app
-COPY package.json yarn.lock ./
-RUN yarn install
+COPY package.json ./
+RUN  npm i
 COPY . .

@@ -1,11 +1,14 @@
 version: '3.4'
 
 services:
-  expressapp:
-    image: expressapp
+  app:
+    image: app
     build: .
+    environment:
+      NODE_ENV: development
     ports:
       - 5000:5000
     volumes:
       - .:/usr/src/app
-    command: yarn dev
+      - /usr/src/app/node_modules
+    command: yarn nodemon -q -L -w src src/main.ts
