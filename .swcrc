@@ -1,13 +1,5 @@
 {
-  "compilerOptions": {
-    "sourceMap": true,
-    "target": "ESNext",
-    "module": "CommonJS",
-    "strict": true,
-    "lib": ["esnext"],
-    "esModuleInterop": true,
-    "moduleResolution": "Node",
-    "incremental": true,
+  "jsc": {
     "baseUrl": "src",
     "paths": {
       "@lib/*": ["lib/*"],
@@ -21,12 +13,14 @@
       "@interfaces/*": ["interfaces/*"],
       "@errors/*": ["errors/*"],
       "@config/*": ["config/*"]
-    }
+    },
+    "parser": {
+      "syntax": "typescript"
+    },
+    "target": "es2021"
   },
-  "ts-node": {
-    "swc": true,
-    "require": ["tsconfig-paths/register"]
+  "module": {
+    "type": "commonjs"
   },
-  "exclude": ["build", "tests", "node_modules"],
-  "include": ["src/**/*.ts"]
+  "sourceMaps": true
 }
