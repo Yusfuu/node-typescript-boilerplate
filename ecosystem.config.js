@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'app',
-      script: 'build/main.js',
+      script: 'dist/main.js',
       instances: 'max',
       max_restarts: 5,
       env: {
