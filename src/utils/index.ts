@@ -1,1 +1,1 @@
-export { catchAsync } from "@utils/catchAsync";
+export { catchAsync } from '@utils/catchAsync';

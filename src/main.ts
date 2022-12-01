@@ -9,10 +9,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet(), compression(), limiter, express.json());
 
-app.get('/', (req: Request, res: Response) => {
-  res.json({
-    message: 'Hi Mom 👋',
-  });
+app.get('/', (request: Request, response: Response) => {
+  return response.json({ message: 'Hi Mom 👋' });
 });
 
 const port = process.env.PORT || 5000;
